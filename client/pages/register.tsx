@@ -13,7 +13,7 @@ export default function Register(props:any) {
       e.preventDefault();
       window.sessionStorage.setItem("email",credentials.email);
       const {email,password} = credentials;
-      const response = await fetch("http://localhost:8080/reg/createuser",{
+      const response = await fetch("https://dashboard.render.com/web/srv-cs228o0gph6c73ccqdlg/deploys/dep-cs228o8gph6c73ccqe10/reg/createuser",{
       method:'POST',
         headers:{
           'Content-Type': 'application/json'
