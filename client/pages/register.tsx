@@ -13,7 +13,7 @@ export default function Register(props:any) {
       e.preventDefault();
       window.sessionStorage.setItem("email",credentials.email);
       const {email,password} = credentials;
-      const response = await fetch("https://dashboard.render.com/web/srv-cs228o0gph6c73ccqdlg/deploys/dep-cs228o8gph6c73ccqe10/reg/createuser",{
+      const response = await fetch("http://localhost:8080/reg/createuser",{
       method:'POST',
         headers:{
           'Content-Type': 'application/json'
@@ -41,11 +41,11 @@ export default function Register(props:any) {
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <Image
-            className="mx-auto h-[106px] w-auto"
+            className="mt-[30px] mx-auto h-[26px] w-auto"
             src={logo}
             alt="Your Company"
           />
-          <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+          <h2 className="mt-[60px] text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Register your account
           </h2>
         </div>
