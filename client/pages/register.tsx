@@ -13,7 +13,7 @@ export default function Register(props:any) {
       e.preventDefault();
       window.sessionStorage.setItem("email",credentials.email);
       const {email,password} = credentials;
-      const response = await fetch("https://ecommerce-9hry.onrender.com/reg/loginof",{
+      const response = await fetch("https://ecommerce-9hry.onrender.com/reg/createuser",{
       method:'POST',
         headers:{
           'Content-Type': 'application/json'
