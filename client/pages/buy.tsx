@@ -62,7 +62,7 @@ export default function Buy() {
 	  let config = {
 		method: "post",
 		maxBodyLength: Infinity,
-		url: "https://dashboard.render.com/web/srv-cs228o0gph6c73ccqdlg/deploys/dep-cs228o8gph6c73ccqe10/payment/orders",
+		url: "https://ecommerce-9hry.onrender.com/payment/orders",
 		headers: {
 		  'Content-Type': 'application/json'
 		},
@@ -115,7 +115,7 @@ export default function Buy() {
   
 	  const paymentId = e.target.paymentId.value;
   
-	  axios.get(`https://dashboard.render.com/web/srv-cs228o0gph6c73ccqdlg/deploys/dep-cs228o8gph6c73ccqe10/payment/payment/${paymentId}`)
+	  axios.get(`https://ecommerce-9hry.onrender.com/payment/payment/${paymentId}`)
       .then((response) => {
 		console.log(response.data);
 		setResponseState(response.data)
